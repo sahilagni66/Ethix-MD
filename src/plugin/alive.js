@@ -12,7 +12,7 @@ const alive = async (m, Matrix) => {
   const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).toLowerCase() : '';
     if (['alive', 'uptime', 'runtime'].includes(cmd)) {
 
-  const uptimeMessage = `*🤖 ETHIX-MD Status Overview*
+  const uptimeMessage = `*🤖 𝐏ⱺω𝖾𝗋𝖾ᑯ 𝐁𝗒 𝐅𝖾ᥣ𝗂𝗑*
 _________________________________________
 
 *📆 ${days} Day*
@@ -51,7 +51,7 @@ _________________________________________
             text: uptimeMessage
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
-            text: "© Powered By 𝞢𝙏𝞖𝞘𝞦-𝞛𝘿"
+            text: "©𝐏ⱺω𝖾𝗋𝖾ᑯ 𝐁𝗒 𝐅𝖾ᥣ𝗂𝗑"
           }),
           header: proto.Message.InteractiveMessage.Header.create({
             title: "",
@@ -62,13 +62,9 @@ _________________________________________
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons
           }),
-          contextInfo: {
-                  mentionedJid: [m.sender], 
-                  forwardingScore: 999,
-                  isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "Ethix-MD",
+          contextInfo: {        
+                  forwardingScore: 1,
+                  isForwarded: false,
                   serverMessageId: 143
                 }
               }
